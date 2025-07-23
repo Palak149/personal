@@ -1,0 +1,29 @@
+body{
+    background-color: white;
+    color: rgb(4, 4, 4);
+    text-align: left;
+}
+p{
+    font-size: 20px;
+    line-height: 1.5;
+    
+}
+#p1{
+    font-size: 25px;
+    color: rgb(86, 51, 224);
+    
+}
+h1,h2
+{
+    font-size: 30px;
+    color: rgb(109, 51, 224);
+}
+nav{
+    background-color: #c8c8e2;
+    color: white;
+    padding: 10px;
+    float: bottom;
+}
+footer{
+    text-align: center;
+}
