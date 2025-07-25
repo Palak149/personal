@@ -69,6 +69,7 @@ body {
     margin-bottom: 30px;
   }
 
+  
 
   .purple {
     color: rgb(170, 107, 228);
@@ -135,7 +136,16 @@ body {
     margin: 0 0 10px;
     color: rgb(170, 107, 228);
   }
-
+  .project-card a
+  {
+    text-decoration: none;
+    color: rgb(97, 76, 76);
+    font-size: 1.1rem;
+    transition: color 0.3s;
+  }
+  .project-card a:hover {
+    color: rgb(153, 153, 226);
+  }
   footer {
     background-color: rgb(18, 18, 62);
     text-align: center;
