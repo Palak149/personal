@@ -1,201 +1,480 @@
 body {
-    background-color: rgb(0, 0, 33);
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
+  background-color: rgb(0, 0, 33);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6; /* Enhanced: Better readability */
+}
+
+/* Header and Navigation */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  background-color: rgb(18, 18, 62);
+  flex-wrap: wrap;
+  padding: 0 20px; /* Enhanced: More consistent padding */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Enhanced: Subtle shadow */
+  position: sticky; /* Enhanced: Sticky nav */
+  top: 0;
+  z-index: 1000; /* Ensure it stays on top */
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0; /* Remove default margin */
+}
+
+nav ul li {
+  list-style: none;
+  margin: 0 15px; /* Enhanced: Spacing between nav items */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  transition: color 0.3s ease, transform 0.3s ease; /* Enhanced: Add transform transition */
+  position: relative;
+  padding-bottom: 5px; /* Space for underline effect */
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: rgb(153, 153, 226);
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease; /* Underline animation */
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav ul li a:hover {
+  color: rgb(153, 153, 226);
+  transform: translateY(-2px); /* Enhanced: Lift on hover */
+}
+
+.left {
+  font-size: 1.7rem; /* Enhanced: Slightly larger */
+  font-weight: bold;
+  color: rgb(170, 107, 228); /* Enhanced: Highlight name */
+}
+
+/* Main Content */
+main hr {
+  border: 0;
+  background: #9c97f1;
+  height: 1px;
+  margin: 60px 5%; /* Enhanced: More margin, percentage for responsiveness */
+  opacity: 0.5; /* Subtle */
+}
+
+.firstsection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 100px 0; /* Enhanced: More vertical space */
+  flex-wrap: wrap;
+  padding: 0 5%; /* Enhanced: Consistent padding */
+  min-height: 70vh; /* Ensure it takes up enough screen space */
+}
+
+.leftsection {
+  font-size: 2.2rem; /* Enhanced: Larger font */
+  width: 100%;
+  max-width: 550px; /* Adjusted max-width */
+  text-align: left; /* Aligned left */
+  margin-bottom: 30px;
+  line-height: 1.4;
+}
+
+.leftsection div {
+  margin-top: 10px;
+}
+
+.rightsection {
+  display: flex; /* Use flexbox for image positioning */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 400px; /* Adjust max-width for image container */
+}
+
+.rightsection img {
+  width: 80%; /* Adjusted image size */
+  max-width: 300px; /* Max size for image */
+  border-radius: 50%; /* Make it round */
+  border: 5px solid rgb(170, 107, 228); /* Purple border */
+  box-shadow: 0 0 20px rgba(170, 107, 228, 0.6); /* Glow effect */
+  transition: transform 0.3s ease;
+}
+
+.rightsection img:hover {
+  transform: scale(1.05); /* Zoom effect on hover */
+}
+
+.purple {
+  color: rgb(170, 107, 228);
+}
+
+.text-gray {
+  color: #b0b0b0; /* Enhanced: Softer gray */
+  font-size: 1.1rem; /* Slightly larger */
+  margin-top: 20px;
+  line-height: 1.8;
+}
+
+#element {
+  color: rgb(170, 107, 228);
+  font-weight: bold;
+}
+
+.secondsection {
+  max-width: 90vw;
+  margin: auto;
+  padding: 60px 10px; /* Enhanced: More padding */
+  text-align: center;
+}
+
+.secondsection h2 { /* Changed h1 to h2 for semantic correctness */
+  font-size: 2.5rem; /* Enhanced: Larger heading */
+  margin-bottom: 40px; /* More space below heading */
+  color: rgb(170, 107, 228);
+  position: relative;
+  display: inline-block; /* For underline effect */
+}
+
+.secondsection h2::after {
+  content: '';
+  position: absolute;
+  width: 80%;
+  height: 3px;
+  background-color: #9c97f1;
+  left: 10%;
+  bottom: -10px;
+  border-radius: 5px;
+}
+
+/* Services Section */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+  gap: 25px; /* Space between cards */
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.service-card {
+  background-color: rgb(25, 25, 70);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #9c97f1;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.service-card:hover {
+  transform: translateY(-5px); /* Lift effect */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.service-card h3 {
+  margin-top: 0;
+  color: rgb(170, 107, 228);
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between icon and text */
+}
+
+.service-card h3 .fas {
+  font-size: 1.5rem;
+  color: #9c97f1;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #b0b0b0;
+}
+
+/* Projects Section */
+.projects-container {
+  display: grid; /* Use grid for projects */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.project-card {
+  background-color: rgb(25, 25, 70);
+  padding: 25px;
+  border-radius: 12px;
+  border-left: 5px solid #9c97f1; /* Stronger border */
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.project-card h3 {
+  margin: 0 0 15px;
+  color: rgb(170, 107, 228);
+  font-size: 1.4rem;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #b0b0b0;
+  margin-bottom: 15px;
+}
+
+.project-card strong {
+  color: #fff;
+}
+
+.project-card em {
+  color: #ddd;
+}
+
+.project-link {
+  text-decoration: none;
+  color: #9c97f1; /* Changed color for better visibility */
+  font-size: 1rem;
+  display: inline-flex; /* Align icon and text */
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.project-link:hover {
+  color: rgb(170, 107, 228);
+  transform: translateX(5px); /* Slide effect on hover */
+}
+
+.project-link .fas {
+  font-size: 0.9rem;
+}
+
+/* Contact Section */
+.contact-info {
+  font-size: 1.1rem;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-info p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-info p .fas {
+  color: #9c97f1;
+  font-size: 1.3rem;
+}
+
+.contact-info a {
+  color: #9c97f1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: rgb(170, 107, 228);
+  text-decoration: underline;
+}
+
+.social-links {
+  margin-top: 25px;
+  display: flex;
+  gap: 25px;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.8rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+  color: rgb(170, 107, 228);
+  transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+  background-color: rgb(18, 18, 62);
+  text-align: center;
+  padding: 25px; /* More padding */
+  font-size: 0.95rem;
+  margin-top: 80px; /* More space above footer */
+  border-top: 1px solid #9c97f1;
+}
+
+/* Back to Top Button */
+#backToTopBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed position */
+  bottom: 30px; /* Place at the bottom */
+  right: 30px; /* Place at the right */
+  z-index: 99; /* Make sure it's above other elements */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: rgb(170, 107, 228); /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 50%; /* Rounded corners */
+  font-size: 1.2rem; /* Increase font size */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+#backToTopBtn:hover {
+  background-color: rgb(153, 153, 226); /* Darker background on hover */
+  transform: translateY(-3px);
+}
+
+/* ----------- Media Queries for Mobile ----------- */
+
+@media (max-width: 768px) {
+  nav {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+      padding: 15px 10px;
   }
 
-  nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 80px;
-    background-color: rgb(18, 18, 62);
-    flex-wrap: wrap;
-    padding: 0 10px;
+  nav .left {
+      margin-bottom: 15px;
+      font-size: 1.5rem;
   }
 
   nav ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 0;
-    margin: 10px 0;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
   }
 
   nav ul li {
-    list-style: none;
-    margin: 10px;
-  }
-
-  nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.1rem;
-    transition: color 0.3s;
-  }
-
-  nav ul li a:hover {
-    color: rgb(153, 153, 226);
-  }
-
-  .left {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-
-  main hr {
-    border: 0;
-    background: #9c97f1;
-    height: 1px;
-    margin: 40px 30px;
+      margin: 8px 0;
   }
 
   .firstsection {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 80px 0;
-    flex-wrap: wrap;
-    padding: 0 20px;
+      flex-direction: column;
+      text-align: center;
+      margin: 50px 0;
+      padding: 0 5%;
   }
 
   .leftsection {
-    font-size: 2rem;
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
-    margin-bottom: 30px;
+      font-size: 1.8rem;
+      width: 100%;
+      max-width: none;
+      margin-bottom: 40px;
+      text-align: center; /* Center align for small screens */
   }
 
-  
-
-  .purple {
-    color: rgb(170, 107, 228);
+  .rightsection {
+      max-width: 250px; /* Smaller image on mobile */
   }
 
-  .text-gray {
-    color: gray;
-    font-size: 1rem;
-    margin-top: 10px;
-  }
-
-  #element {
-    color: rgb(170, 107, 228);
-    font-weight: bold;
+  .rightsection img {
+      width: 100%;
   }
 
   .secondsection {
-    max-width: 90vw;
-    margin: auto;
-    padding: 40px 10px;
-    text-align: center;
+      padding: 40px 5%; /* Adjusted padding */
   }
 
-  .secondsection h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+  .secondsection h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
   }
 
-  .skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    list-style: none;
-    padding: 0;
+  .text-gray {
+      font-size: 1rem;
   }
 
-  .skills-list li {
-    background-color: rgb(25, 25, 60);
-    padding: 10px 20px;
-    border-radius: 20px;
-    border: 1px solid #9c97f1;
-    font-size: 0.9rem;
+  .skills-list, .services-grid, .projects-container {
+      grid-template-columns: 1fr; /* Single column layout for small screens */
+      gap: 20px;
   }
 
-  .projects-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
+  .service-card, .project-card {
+      width: 95%; /* Adjust width for small screens */
+      max-width: none; /* Remove max-width */
+      margin: 0 auto; /* Center cards */
+      padding: 20px;
   }
 
-  .project-card {
-    background-color: rgb(25, 25, 70);
-    padding: 20px;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 500px;
-    text-align: left;
-    border-left: 4px solid #9c97f1;
+  .contact-info {
+      font-size: 1rem;
   }
 
-  .project-card h3 {
-    margin: 0 0 10px;
-    color: rgb(170, 107, 228);
-  }
-  .project-card a
-  {
-    text-decoration: none;
-    color: rgb(97, 76, 76);
-    font-size: 1.1rem;
-    transition: color 0.3s;
-  }
-  .project-card a:hover {
-    color: rgb(153, 153, 226);
-  }
-  footer {
-    background-color: rgb(18, 18, 62);
-    text-align: center;
-    padding: 20px;
-    font-size: 1rem;
-    margin-top: 50px;
+  .social-links {
+      gap: 20px;
   }
 
-  /* ----------- Media Queries for Mobile ----------- */
-
-  @media (max-width: 768px) {
-    nav {
-      flex-direction: column;
-      align-items: flex-start;
-      height: auto;
-      padding: 10px;
-    }
-
-    nav ul {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    nav ul li {
-      margin: 5px 0;
-    }
-
-    .firstsection {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .leftsection {
+  .social-links a {
       font-size: 1.5rem;
-      width: 90%;
-    }
-
-    .secondsection h1 {
-      font-size: 1.6rem;
-    }
-
-    .skills-list li {
-      font-size: 0.85rem;
-    }
-
-    .project-card {
-      width: 90%;
-    }
-
-    footer {
-      font-size: 0.9rem;
-    }
   }
+
+  footer {
+      font-size: 0.85rem;
+      padding: 20px;
+      margin-top: 60px;
+  }
+}
+/* Add this to your style.css */
+.btn-resume {
+  background-color: rgb(170, 107, 228); /* Purple background */
+  color: white !important; /* Important to override default link color */
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border: 1px solid rgb(170, 107, 228); /* Border color matching background */
+}
+
+.btn-resume:hover {
+  background-color: rgb(153, 153, 226); /* Lighter purple on hover */
+  transform: translateY(-2px);
+  color: white !important; /* Keep text white on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow on hover */
+  /* Remove the ::after underline effect for this button */
+  content: none;
+  width: auto; /* Reset width property */
+}
+
+/* Ensure the underline effect is removed specifically for this button */
+.btn-resume::after {
+  width: 0 !important;
+}
+
+/* Media Query adjustment for smaller screens */
+@media (max-width: 768px) {
+  nav ul li .btn-resume {
+      padding: 10px 20px; /* Make button larger on mobile */
+      width: fit-content; /* Adjust width */
+      margin-top: 10px; /* Add some space above it */
+  }
+}
