@@ -1,120 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Palak's Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Palak's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <div class="left">Palak's Portfolio</div>
-      <div class="right">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact Me</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
+    <header>
+        <nav>
+            <div class="left">Palak's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                    <li><a href="https://github.com/Palak149/personal/blob/main/Palak%20Resume.pdf" target="_blank" class="btn-resume">Resume</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-  <main>
-    <!-- Home Section -->
-    <section class="firstsection" id="home">
-      <div class="leftsection">
-        Hi, My name is <span class="purple">Palak</span>
-        <div>and I am passionate</div>
-        <span id="element"></span>
-      </div>
-      <div class="rightsection">
-        
-      </div>
-    </section>
+    <main>
+        <section class="firstsection" id="home">
+            <div class="leftsection">
+                Hi, My name is <span class="purple">Palak</span>
+                <div>and I am passionate</div>
+                <span id="element"></span>
+            </div>
+            <div class="rightsection">
+                <img src="placeholder.png" alt="Palak's Profile Picture">
+            </div>
+        </section>
 
-    <hr>
+        <hr>
 
-    <!-- About Section -->
-    <section class="secondsection" id="about">
-      <h1>About Me</h1>
-      <p class="text-gray">
-        I am a web developer with skills in HTML, CSS, JavaScript, and UI design. I enjoy building clean, responsive, and user-friendly websites. I’m always excited to learn new tools and technologies.
-      </p>
-    </section>
+        <section class="secondsection" id="about">
+            <h2>About Me</h2>
+            <p class="text-gray">
+                I am a web developer with skills in HTML, CSS, JavaScript, and UI design. I enjoy building clean, responsive, and user-friendly websites. I’m always excited to learn new tools and technologies. My goal is to create impactful and visually appealing digital experiences.
+            </p>
+        </section>
 
-    <hr>
+        <hr>
 
-    <!-- Services Section -->
-    <section class="secondsection" id="services">
-      <h1>Services</h1>
-      <ul class="skills-list">
-        <li>Website Design</li>
-        <li>Responsive Layouts</li>
-        <li>Graphic Design</li>
-        <li>Logo & Banner Design</li>
-        <li>Portfolio Development</li>
-        <li>Video Editing</li>
-      </ul>
-    </section>
+        <section class="secondsection" id="services">
+            <h2>Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3><i class="fas fa-desktop"></i> Website Design</h3>
+                    <p>Crafting visually appealing and user-centric website layouts.</p>
+                </div>
+                <div class="service-card">
+                    <h3><i class="fas fa-mobile-alt"></i> Responsive Layouts</h3>
+                    <p>Ensuring websites look great and function flawlessly on all devices.</p>
+                </div>
+                <div class="service-card">
+                    <h3><i class="fas fa-paint-brush"></i> Graphic Design</h3>
+                    <p>Creating compelling visual content, from illustrations to marketing materials.</p>
+                </div>
+                <div class="service-card">
+                    <h3><i class="fas fa-image"></i> Logo & Banner Design</h3>
+                    <p>Designing unique logos and eye-catching banners that represent your brand.</p>
+                </div>
+                <div class="service-card">
+                    <h3><i class="fas fa-file-code"></i> Portfolio Development</h3>
+                    <p>Building professional online portfolios to showcase your work effectively.</p>
+                </div>
+                
+            </div>
+        </section>
 
-    <hr>
+        <hr>
 
-    <!-- Projects Section -->
-    <section class="secondsection" id="projects">
-      <h1>Projects</h1>
-      <div class="projects-container">
-        <div class="project-card">
-          <h3>Portfolio Website</h3>
-          <p>A clean and simple personal portfolio website made with HTML, CSS, and JS.</p>
-        </div>
-        <div class="project-card">
-          <h3> Tic-Tac-Toe</h3>
-          <p>
-    Dive into the timeless classic of <strong>Tic Tac Toe</strong> — the ultimate battle of strategy, wits, and quick thinking!
-  </p>
-  <p>
-    Built using <em>HTML, CSS, and JavaScript</em>, this project combines modern web design with interactive gameplay.
-  </p>
-  <p>
-    Ready to make your move? Let’s see who gets three in a row first!
-  </p>
-          <a href="  https://palak149.github.io/Tic-Tac-Toe/" target="_blank">Tic Tac Toe</a>
-        </div>
-        <div class="project-card">
-          <h3>Landing Page</h3>
-          <p>A responsive landing page for a product or service using Bootstrap.</p>
-          
-        </div>
-      </div>
-    </section>
+        <section class="secondsection" id="projects">
+            <h2>Projects</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <h3>Portfolio Website</h3>
+                    <p>A clean and simple personal portfolio website made with HTML, CSS, and JS. This project demonstrates foundational web development skills.</p>
+                    <a href=" https://palak149.github.io/personal/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Tic-Tac-Toe Game</h3>
+                    <p>Dive into the timeless classic of <strong>Tic Tac Toe</strong> — the ultimate battle of strategy, wits, and quick thinking!</p>
+                    <p>Built using <em>HTML, CSS, and JavaScript</em>, this project combines modern web design with interactive gameplay.</p>
+                    <p>Ready to make your move?</p>
+                    <a href="https://palak149.github.io/Tic-Tac-Toe/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Play Tic Tac Toe</a>
+                </div>
+                <div class="project-card">
+                    <h3>To Do List Application</h3>
+                    <p>A clean, intuitive, and efficient To-Do List application built to help users manage their daily tasks and boost productivity.</p>
+                    <a href=" https://palak149.github.io/To-Do-List-Application-/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> View Project</a>
+                </div>
+            </div>
+        </section>
 
-    <hr>
+        <hr>
 
-    <!-- Contact Section -->
-    <section class="secondsection" id="contact">
-      <h1>Contact Me</h1>
-      <p>Email: mehlapalak@gmail.com</p>
-      <p>Phone: +91-9466580928</p>
-    </section>
-  </main>
+        <section class="secondsection" id="contact">
+            <h2>Contact Me</h2>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> Email: <a href="mailto:mehlapalak@gmail.com">mehlapalak@gmail.com</a></p>
+                <p><i class="fas fa-phone"></i> Phone: <a href="tel:+919466580928">+91-9466580928</a></p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/palak-mehla-29723a340?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Palak149" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://x.com/palak56699" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <footer>
-    <p>© 2025 www.palaksportfolio.com | All rights reserved</p>
-  </footer>
+    <footer>
+        <p>&copy; <span id="current-year"></span> www.palaksportfolio.com | All rights reserved</p>
+    </footer>
 
-  <!-- Typed.js Script -->
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  <script>
-    var typed = new Typed('#element', {
-      strings: ['Web Developer', 'Graphic Designer', 'Web Designer', 'Video Editor'],
-      typeSpeed: 50,
-      loop: true
-    });
-  </script>
+    <button id="backToTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        // Typed.js initialization
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'App Developer', 'Web Designer'],
+            typeSpeed: 50,
+            backSpeed: 30, // Speed of deleting text
+            loop: true,
+            cursorChar: '|', // Cursor character
+            smartBackspace: true // Only backspace what doesn't match the next string
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Back to Top Button functionality
+        const backToTopBtn = document.getElementById('backToTopBtn');
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
+
+        backToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Update current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
-
